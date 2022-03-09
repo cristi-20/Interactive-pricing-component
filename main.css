@@ -1,0 +1,374 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  display: inline-block;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+span {
+  display: inline-block;
+}
+
+body {
+  background: #fafbff;
+  font-family: "Manrope", sans-serif;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #858fad;
+  padding: 1rem;
+  margin: 0 auto;
+}
+
+.container .text-container {
+  padding: 1.1rem;
+  text-align: center;
+  margin: 5rem 0;
+}
+
+.container .text-container h1 {
+  font-size: 1.3rem;
+  color: #293356;
+  margin-bottom: 1rem;
+}
+
+.container .text-container p {
+  line-height: 1.5;
+}
+
+.container .pricing-box {
+  background: #e6e6e6;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 5rem;
+  border-radius: 7px;
+}
+
+.container .pricing-box .pageviews-price {
+  text-align: center;
+}
+
+.container .pricing-box .pageviews-price .pageviews {
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin-top: 2rem;
+}
+
+.container .pricing-box .pageviews-price .price {
+  letter-spacing: 2px;
+  margin: 1.2rem;
+}
+
+.container .pricing-box .pageviews-price .price span {
+  font-size: 2rem;
+  color: #293356;
+  font-weight: bold;
+}
+
+.container .pricing-box .slidercontainer {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.container .pricing-box .slidercontainer input[type="range"] {
+  background: transparent;
+  width: 80%;
+}
+
+.container .pricing-box .slidercontainer input[type="range"]::-moz-range-progress {
+  background-color: #10d5c2;
+  height: 10px;
+  border-radius: 10px;
+}
+
+.container .pricing-box .slidercontainer input[type="range"]::-moz-range-track {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 10px;
+  background-color: #f2f5fc;
+  border-radius: 10px;
+}
+
+.container .pricing-box .slidercontainer input[type="range"]::-moz-range-thumb {
+  -moz-appearance: none;
+  appearance: none;
+  width: 40px;
+  height: 40px;
+  /* Slider handle height */
+  border-radius: 100%;
+  background: #10d5c2;
+  background-image: url(/SVG/left-and-right-small-triangular-arrows-couple.svg);
+  background-size: 25px;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  /* Green background */
+  cursor: pointer;
+  /* Cursor on hover */
+  border: none;
+}
+
+.container .pricing-box .billing-services {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 0.7rem;
+  padding: 0.5rem;
+  /* Hide default HTML checkbox */
+  /* The slider */
+}
+
+.container .pricing-box .billing-services li {
+  margin-left: 0.8rem;
+}
+
+.container .pricing-box .billing-services .switch {
+  position: relative;
+  display: inline-block;
+  width: 45px;
+  height: 25px;
+}
+
+.container .pricing-box .billing-services .switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.container .pricing-box .billing-services .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  /* Rounded sliders */
+}
+
+.container .pricing-box .billing-services .slider:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.container .pricing-box .billing-services .slider.round {
+  border-radius: 34px;
+}
+
+.container .pricing-box .billing-services .slider.round:before {
+  border-radius: 50%;
+}
+
+.container .pricing-box .billing-services input:checked + .slider {
+  background-color: #10d5c2;
+}
+
+.container .pricing-box .billing-services input:focus + .slider {
+  -webkit-box-shadow: 0 0 1px #2196f3;
+          box-shadow: 0 0 1px #2196f3;
+}
+
+.container .pricing-box .billing-services input:checked + .slider:before {
+  -webkit-transform: translateX(19px);
+  transform: translateX(19px);
+}
+
+.container .pricing-box .billing-services .discount {
+  color: #ff8c66;
+  background: #feece7;
+  padding: 0.2rem 0.5rem;
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+.container .pricing-box .features-trial {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 3rem;
+  width: 100%;
+}
+
+.container .pricing-box .features-trial .features {
+  margin: 1.5rem 0;
+  text-align: center;
+}
+
+.container .pricing-box .features-trial .features li {
+  margin: 1rem 0;
+}
+
+.container .pricing-box .features-trial .features li:before {
+  content: "\2714";
+  color: #10d5c2;
+  margin-right: 1rem;
+}
+
+.container .pricing-box .features-trial .trial {
+  background-color: #293356;
+  color: #858fad;
+  padding: 1.2rem 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 2rem 0;
+  border-radius: 50px;
+  -webkit-transition: all ease-in-out 0.35s;
+  transition: all ease-in-out 0.35s;
+  font-size: 1.1rem;
+}
+
+.container .pricing-box .features-trial .trial:hover {
+  color: white;
+  -webkit-text-stroke: 1px white;
+}
+
+@media (min-width: 768px) {
+  .container .text-container h1 {
+    font-size: 1.7rem;
+  }
+  .container .text-container p {
+    font-size: 1.2rem;
+  }
+  .container .pricing-box {
+    width: 90%;
+  }
+  .container .pricing-box .pageviews-price {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 70%;
+  }
+  .container .pricing-box .pageviews-price .pageviews {
+    font-size: 1.5rem;
+    margin: 3rem 0;
+  }
+  .container .pricing-box .pageviews-price .price {
+    margin: 3rem 0;
+    font-size: 1.3rem;
+  }
+  .container .pricing-box .pageviews-price .price span {
+    font-size: 2.5rem;
+  }
+  .container .pricing-box .slidercontainer input[type="range"] {
+    width: 70%;
+  }
+  .container .pricing-box .billing-services {
+    font-size: 1.2rem;
+    width: 70%;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 0;
+    margin: 1rem 0;
+  }
+  .container .pricing-box .billing-services li {
+    margin: 0;
+  }
+  .container .pricing-box .features-trial {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 70%;
+    margin-bottom: 2rem;
+  }
+  .container .pricing-box .features-trial .features {
+    text-align: left;
+  }
+  .container .pricing-box .features-trial li {
+    font-size: 1.2rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    width: 75%;
+  }
+  .container .pricing-box {
+    max-width: 75%;
+  }
+}
+/*# sourceMappingURL=main.css.map */

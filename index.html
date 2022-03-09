@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../Pricing Box/main.css">
+    <title>Pricing Box</title>
+    <script type="text/javascript">
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="text-container">
+            <h1>Simple, traffic-based pricing</h1>
+            <p>Sign-up for our 30-day trial.</p>
+            <p>No credit car required.</p>
+        </div>
+
+        <div class="pricing-box">
+            <div class="pageviews-price">
+                <p class="pageviews">
+                    100k pageviews
+                </p>
+                <p class="price">
+                    <span> $<output id="amount" name="amount" for="rangeInput"
+                            onforminput="value = foo.valueAsNumber;">16</output></span>/month
+                </p>
+            </div>
+
+            <div class="slidercontainer">
+                <input id="rangeInput" type="range" name="foo" min="16" oninput="amount.value=rangeInput.value">
+
+            </div>
+
+
+            <ul class="billing-services">
+                <li>Monthly Billing</li>
+                <li>
+                    <label class="switch">
+                        <input type="checkbox" />
+                        <span class="slider round"></span>
+                    </label>
+                </li>
+                <li>Yearly Billing</li>
+                <li class="discount">-25%</li>
+            </ul>
+
+
+            <div class="features-trial">
+                <ul class="features">
+                    <li>Unlimited websites</li>
+                    <li>100% data ownership</li>
+                    <li>Email reports</li>
+                </ul>
+                <button class="trial">
+                    Start my trial
+                </button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
